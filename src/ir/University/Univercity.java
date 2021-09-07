@@ -39,7 +39,7 @@ public class Univercity {
 
 
 
-//------
+    //------
     public Employee[] getLIstOfemployee2() {
 
         return employees;
@@ -51,7 +51,7 @@ public class Univercity {
 
 
     public void addEmployees (Employee employees){
-            this.employees[count++] = employees;
-        }
+        this.employees[count++] = employees;
     }
+}
 
