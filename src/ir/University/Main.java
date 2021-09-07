@@ -90,7 +90,7 @@ public class Main {
 
 
         System.out.println("Enter id Of Person :");
-        int id = input.nextInt();
+        int id = scannerInt();
 
         if (univercity.getEmployees(id) != null && univercity.getEmployees(id).isMarrid()) {
             System.out.println("Enter his Wife's Id :");
@@ -124,15 +124,15 @@ public class Main {
         System.out.println("pleas enter id of person for distance :");
         int id = scannerInt();
         System.out.println("pleas Enter Latitude :");
-        String lat = scannerString();
+        double lat = scannerdouble();
         System.out.println("pleas Enter Longtitude :");
-        String longyit = scannerString();
+        double longyit = scannerdouble();
         Employee employee = univercity.getEmployees(id);
         if (employee != null) {
             employee.setLatitude(lat);
             employee.setLongtitude(longyit);
             double dist = univercity.getEmployees(id).distance();
-            if (dist <= 30 && employee.getisMarride()) {
+            if ( dist <= 30 && employee.getisMarride()) {
                 System.out.println("distance is less than 30 : " + dist);
                 employee.setInvited(true);
             } else if (dist > 30) System.out.println("distance is more than 30 :" + dist);

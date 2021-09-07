@@ -27,8 +27,8 @@ public class Employee {
     private int idOfHusband;
     private String nameOfHusband;
     //Location
-    private String latitude;
-    private String longtitude;
+    private double latitude;
+    private double longtitude;
 
     //------------------------------
 
@@ -76,7 +76,7 @@ public  double  distance(){
 //    System.out.println("pleas Enter y :");
 //    String y =scannerString();
     GreatCircle greatCircle = new GreatCircle(latitude,longtitude);
-    double distace= greatCircle.GreatCirclemetod();
+    double distace= greatCircle.distance();
     return distace;
 //    if (distace<30) System.out.println("distance is less than 30 : "+distace);
 //    else if (distace>30) System.out.println("distance is more than 30 :"+distace);
@@ -121,19 +121,19 @@ public  double  distance(){
         isMarride = marride;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongtitude() {
+    public double getLongtitude() {
         return longtitude;
     }
 
-    public void setLongtitude(String longtitude) {
+    public void setLongtitude(double longtitude) {
         this.longtitude = longtitude;
     }
     //Calculate Location
